@@ -1,0 +1,121 @@
+{
+  "host": "127.0.0.1",
+  "port": 50001,
+
+  "graphics_mode": "photo",
+  "image_directory": "./images/",
+
+  "background_color": "white",
+  "step_color": "turquoise",
+  "view_color": "red",
+
+  "start_position": [7,8],
+  "board_dimensions": [11,11],
+  "bomb_coordinates": [
+    [3,3], [0,4]
+  ],
+    "goal_coordinates": [
+    [1,1]
+  ],
+  "obstacle_coordinates": [
+    [7,5], [5,7], [2,2], [1,3],
+    [0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],
+    [0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[0,7],[0,8],[0,9],[0,10],
+    [10,1],[10,2],[10,3],[10,4],[10,5],[10,6],[10,7],[10,8],[10,9],[10,10],
+    [1,10],[2,10],[3,10],[4,10],[5,10],[6,10],[7,10],[8,10],[9,10]
+    ,[5,5,"invisible"], [4,5,"invisible"], [3,5,"invisible"], [5,4, "invisible"], [6,5,"invisible"]
+  ],
+  "weights": {
+    "0,0": 1, "1,0": 1, "2,0": 1, "3,0": 1.2, "4,0": 1.2, "5,0": 1,
+    "0,1": 1, "1,1": 1, "2,1": 1, "3,1": 1, "4,1": 1, "5,1": 1,
+    "0,2": 1, "1,2": 1.3, "2,2": 1, "3,2": 1, "4,2": 1, "5,2": 1,
+    "0,3": 1, "1,3": 1, "2,3": 1.1, "3,3": 1.2, "4,3": 1, "5,3": 1,
+    "0,4": 1, "1,4": 1, "2,4": 1, "3,4": 1, "4,4": 1, "5,4": 1,
+    "0,5": 1, "1,5": 1, "2,5": 1, "3,5": 1, "4,5": 1, "5,5": 1
+  },
+
+  "use_maps?": true,
+  "object_dictionary": {
+    " ": "free space",
+    "O": "visible obstacle",
+    "I": "invisible obstacle",
+    "B": "bomb",
+    "G": "goal",
+    "A": "agent start position (only 1)"
+  },
+  "object_map":[
+    "OOOOOOOOOOOOOOO",
+    "O    G     O  O",
+    "O OOOOOO   O  O",
+    "O   O  OO OO  O",
+    "O O           O",
+    "O O OOOOOO  OOO",
+    "O          B  O",
+    "OOOOOO OOOOOOOO",
+    "O    O OO     O",
+    "O B          AO",
+    "OOOOOOOOOOOOOOO"
+  ],
+  "object_map1":[
+    "OOOOOOOOOOOOOOO",
+    "O       OOOO  O",
+    "O  OO      O  O",
+    "O       O  OO O",
+    "O OOOOOOO     O",
+    "O   GOOOO  OOOO",
+    "O  OOOO       O",
+    "O OOOOOOOOOOO O",
+    "O O   O   O   O",
+    "O   O   O   OAO",
+    "OOOOOOOOOOOOOOO"
+  ],
+  "object_map2":[
+    "OOOOOOOOOOOOOOO",
+    "OG       OOOOOO",
+    "OOOOOOOO OOOOOO",
+    "O             O",
+    "OOOOO OOOOOOO O",
+    "O             O",
+    "OOO OOOOO OOOOO",
+    "O             O",
+    "OOOOOOOOOO O OO",
+    "OA            O",
+    "OOOOOOOOOOOOOOO"
+  ],
+  "weight_dictionary": {
+    "1": 1,
+    "2": 1.1,
+    "3": 1.2,
+    "4": 1.3,
+    "R": "random"
+  },
+  "weight_map" : [
+    "RRRRRRRRRRRRRRR",
+    "111111111111111",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR"
+  ],
+
+  "weight_map2" : [
+    "RRRRRRRRRRRRRRR",
+    "111111111111111",
+    "RRRRRRRRRRRRRRR",
+    "RRRRR43RR11111R",
+    "RRRRR4RRRRRRR1R",
+    "RRRRR4444R1111R",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR",
+    "RRRRRRRRRRRRRRR"
+  ]
+}
+
+
