@@ -27,7 +27,7 @@ Tendo isto em conta, o algoritmo A star vai escolher a posição com menor “f�
 
 Como resultado deste algoritmo um caminho com mais casas poderia ser escolhido por ter um custo menor de deslocação entre as suas casas.
 
-###Grupo 3:
+###Grupo 4:
  
  Henrique Moniz 20182446
  Leonardo Branco 20182157
