@@ -2,10 +2,9 @@ import client
 import ast
 import random
 
-# linha 150 probably ta mal
 
-VISITED_COLOR = "#400000"
-FRONTIER_COLOR = "blue"
+VISITED_COLOR = "#FFA23A"
+FRONTIER_COLOR = "#FC6238"
 
 
 # AUXILIAR
@@ -26,8 +25,8 @@ class Queue:
     def insert(self, element):
         return self.queue_data.append(element)
 
-    def remove(self, lmao):
-        return self.queue_data.remove(lmao)
+    def remove(self, node):
+        return self.queue_data.remove(node)
 
     def getQueue(self):
         return self.queue_data
@@ -197,12 +196,12 @@ class Agent:
         end = False
         n = None
         marked = []
+        marked2 = []
         self.visited_nodes.insert(node)
-        #Pesquisar os primeiros nós fronteira, children do node inicial, e inseri-los na queue frontier_nodes
+        # Pesquisar os primeiros nós fronteira, children do node inicial, e inseri-los na queue frontier_nodes
         for di in ["north", "east", "south", "west"]:
             nodeNew1 = self.getNode(node, di)
             self.frontier_nodes.insert(nodeNew1)
-
         """
         Percorrer os nodes enquanto não encontrar o node final não vai acabar o ciclo.
         Cria variável minimo que inicializa em None, iguala esse minimo à soma ds heuristica com o pathcost do node
@@ -229,6 +228,9 @@ class Agent:
             if n.getState() == self.goalNodePos:
                 print(n.getState())
                 return n
+            if n not in marked2:
+                marked2.append(n)
+                self.mark_visited(n)
             self.state = n.getState()
             self.frontier_nodes.remove(n)
             self.visited_nodes.insert(n)
@@ -243,6 +245,7 @@ class Agent:
     """
     Irá calcular a heuristica de todos os nodes, obtendo a distância do entre os nodes e o node objetivo.
     """
+
     def heuristic(self, node):
         return abs(node[0] - self.goalNodePos[0]) + abs(node[1] - self.goalNodePos[1])
 
@@ -288,6 +291,7 @@ class Agent:
     """
     Retorna a direção do próximo step
     """
+
     def direction(self, step, nextStep):
         if step[0] == nextStep[0]:
             if step[1] + 1 == nextStep[1]:
@@ -303,6 +307,7 @@ class Agent:
     """
     Retorna os comandos que o agente tem de executar para andar na próximo direção
     """
+
     def turningDirection(self, directionBefore, directionNow):
         if directionBefore == "north" and directionNow == "east":
             return ["right", "forward"]
@@ -337,6 +342,7 @@ class Agent:
     Irá procurar de entre todos os espaços no gameboard quais são obstaculos e retornar uma lista com as coordenadas
     dos obstaculos
     """
+
     def buscarObstaculos(self):
         obstaculosAux = []
         obstaculos = []
