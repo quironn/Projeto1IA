@@ -5,7 +5,7 @@
 O projeto Agent0_minotauro permite explorar a interação entre um agente e um ambiente.
 
 
-###Ambiente
+### Ambiente
 O ambiente consiste num tabuleiro retangular de casas quadradas, que podem conter obstáculos ou objetivos. Para se movimentar neste ambiente, o agente pode deslocar-se em frente ou mudar de direção.
 
 A interação entre o agente e o ambiente é comandada através de um cliente e acontece no servidor.
@@ -13,7 +13,7 @@ A interação entre o agente e o ambiente é comandada através de um cliente e 
 Foi utilizado o Agent0 minotauro para o desenvolvimento do algoritmo A Star na etapa base.
 
 
-###Algoritmo A star
+### Algoritmo A star
 
 O algoritmo A Star têm o propósito de chegar ao objetivo final pesquisando o caminho mais rápido possível
 
@@ -27,7 +27,7 @@ Tendo isto em conta, o algoritmo A star vai escolher a posição com menor “f�
 
 Como resultado deste algoritmo um caminho com mais casas poderia ser escolhido por ter um custo menor de deslocação entre as suas casas.
 
-###Grupo 4:
+### Grupo 4:
  
  Henrique Moniz 20182446
  Leonardo Branco 20182157
